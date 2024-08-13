@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="showPage('home')">
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-left">
+            <div class="website-text">MY Bank</div>
+            <div class="logo"><img src="images/logo.png" width="40" height="40"></div>
+        </div>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('emi-calculator')">EMI Calculator</a></li>
+            <li><a href="#" onclick="showPage('personal-loan')">Personal Loan</a></li>
+            <li><a href="#" onclick="showPage('eligibility')">Eligibility</a></li>
+            <li><a href="#" onclick="showPage('about-us')">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Marquee for Discounts -->
+    <div class="marquee-container">
+        <marquee behavior="scroll" direction="left">
+            <span>Special Offer: Get up to 20% off on Personal Loans! | Limited Time Offer: 0.5% Reduction in Interest Rates for Home Loans!</span>
+        </marquee>
+    </div>
+
+    <!-- Pages -->
+    <div id="home" class="page">
+        <!-- Marquee for Home Page -->
+        <div class="marquee-container">
+            <marquee behavior="scroll" direction="left">
+                <span>Special Offer: Get up to 20% off on Personal Loans! | Limited Time Offer: 0.5% Reduction in Interest Rates for Home Loans!</span>
+            </marquee>
+        </div>
+        <div class="slideshow-container">
+            <div class="slide active" onclick="showPage('emi-calculator')">
+                <img src="images/emi.jpg"
+                    alt="EMI Calculator">
+                <div class="slide-text">
+                    <h2>EMI Calculator</h2>
+                    <p>Click here to go to the EMI Calculator page.</p>
+                </div>
+            </div>
+            <div class="slide" onclick="showPage('personal-loan')">
+                <img src="images/apply.gif"
+                    alt="Personal Loan">
+                <div class="slide-text">
+                    <h2>Personal Loan</h2>
+                    <p>Click here to go to the Personal Loan page.</p>
+                </div>
+            </div>
+            <div class="slide" onclick="showPage('eligibility')">
+                <img src="images/eligibility.jpg"
+                    alt="Eligibility">
+                <div class="slide-text">
+                    <h2>Eligibility</h2>
+                    <p>Click here to go to the Eligibility page.</p>
+                </div>
+            </div>
+            
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <div id="emi-calculator" class="page">
+        <!-- Marquee for EMI Calculator Page -->
+        <div class="marquee-container">
+            <marquee behavior="scroll" direction="left">
+                <span>Special Offer: Get up to 20% off on Personal Loans! | Limited Time Offer: 0.5% Reduction in Interest Rates for Home Loans!</span>
+            </marquee>
+        </div>
+       
+        <!-- EMI Calculator Form -->
+        <form id="emi-form">
+            <h3>EMI Calculator Page</h3>
+            <label for="principal">Principal (P):</label>
+            <input type="number" id="principal" name="principal" required>
+
+            <label for="years">Number of Years (n):</label>
+            <input type="number" id="years" name="years" required>
+
+            <label for="interest">Rate of Interest (r):</label>
+            <input type="number" id="interest" name="interest" step="0.01" required>
+        </form>
+
+        <div id="emi-result">
+            <p id="emi-value">EMI: </p>
+        </div>
+
+        <button class="apply-loan-btn">Apply Loan</button>
+    </div>
+
+    <div id="personal-loan" class="page">
+        <!-- Marquee for Personal Loan Page -->
+        <div class="marquee-container">
+            <marquee behavior="scroll" direction="left">
+                <span>Special Offer: Get up to 20% off on Personal Loans! | Limited Time Offer: 0.5% Reduction in Interest Rates for Home Loans!</span>
+            </marquee>
+        </div>
+        <h1>Personal Loan Page</h1>
+        <img src="images/apply.gif" alt="Personal Loan Banner"
+            class="banner-image">
+        <button class="apply-loan-btn">Apply Loan</button>
+    </div>
+
+    <div id="eligibility" class="page">
+        <!-- Marquee for Eligibility Page -->
+        <div class="marquee-container">
+            <marquee behavior="scroll" direction="left">
+                <span>Special Offer: Get up to 20% off on Personal Loans! | Limited Time Offer: 0.5% Reduction in Interest Rates for Home Loans!</span>
+            </marquee>
+        </div>
+        <h1>Eligibility Page</h1>
+        <!-- Eligibility Form -->
+        <form id="eligibility-form">
+            <label for="monthly-income">Monthly Income:</label>
+            <input type="number" id="monthly-income" name="monthly-income" required>
+
+            <label for="existing-obligation">Total Existing Obligation/EMI:</label>
+            <input type="number" id="existing-obligation" name="existing-obligation" required>
+
+            <label for="loan-tenure">Loan Tenure (in years):</label>
+            <input type="number" id="loan-tenure" name="loan-tenure" required>
+
+            <div id="calculation-result">
+                <p>Approx Loan Amount: <span id="approx-loan-amt">0</span></p>
+            </div>
+        </form>
+
+        <button class="apply-loan-btn">Apply Loan</button>
+    </div>
+
+    <div id="about-us" class="page">
+        <!-- Marquee for About Us Page -->
+        <div class="marquee-container">
+            <marquee behavior="scroll" direction="left">
+                <span>Special Offer: Get up to 20% off on Personal Loans! | Limited Time Offer: 0.5% Reduction in Interest Rates for Home Loans!</span>
+            </marquee>
+        </div>
+        <div class="about-us-content">
+            <p>Name: Malempati Gayathri</p>
+            <p>University Name: Rivier University</p>
+            <p>About our website:</p>
+            <p>
+                Our website is dedicated to simplifying the loan application process. With user-friendly interfaces and
+                easy-to-use tools like our EMI Calculator, we aim to provide an accessible and straightforward
+                experience for all users. Whether you're looking to apply for a personal loan or determine your
+                eligibility, our website offers the resources and information you need to make informed decisions about
+                your financial future.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 My Bank. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

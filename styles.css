@@ -1,0 +1,337 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7ba7e; /* Light orange color */
+}
+
+/* Marquee Styles */
+.marquee-container {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.marquee-container marquee span {
+    white-space: nowrap;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #282c34;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    margin-top: auto; /* Pushes footer to the bottom */
+    width: 100%;
+}
+
+footer a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Bar Styles */
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #282c34;
+    padding: 20px 20px;  /* Increased padding for more height */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Added shadow for better visibility */
+}
+
+nav .nav-left {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Ensure space is reserved for logo and text on the left */
+}
+
+nav .website-text {
+    color: white;
+    font-size: 24px; /* Adjusted font size for better visibility */
+    font-weight: bold;
+    margin-right: 20px; /* Space between text and logo */
+}
+
+nav .logo {
+    height: 40px; /* Adjusted logo height */
+    width: 40px;  /* Adjusted logo width */
+    background-color: white; /* Placeholder background color for the logo */
+    border-radius: 50%; /* Circular shape for the logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #61dafb;
+    color: #282c34;
+}
+
+/* SlideShow Styles */
+.slideshow-container {
+    position: relative;
+    margin: 80px auto; /* Added margin-top to push content below the navbar */
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    max-height: 500px;
+    height: 400px; /* Fixed height */
+    border-radius: 8px;
+    image-rendering: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slide {
+    display: none;
+    text-align: center;
+    position: relative;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the image fits within the container */
+    object-position: center;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Page Styles */
+.page {
+    display: none;
+    padding: 80px 20px; /* Increased padding for spacing */
+}
+
+.page.active {
+    display: block;
+}
+
+/* EMI Calculator Styles */
+#emi-calculator h1 {
+    color: #333;
+}
+
+#emi-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#emi-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+#emi-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#emi-result {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.apply-loan-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-loan-btn:hover {
+    background-color: #218838;
+}
+
+/* About Us Styles */
+.about-us-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Eligibility Page Styles */
+#eligibility {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto; /* Centering the eligibility page content */
+}
+
+#eligibility h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+#eligibility-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#eligibility-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+#eligibility-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect input width */
+}
+/* Marquee styles */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #f1f1f1; /* Background color for marquee container */
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Other styles */
+
+#calculation-result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #007bff; /* Use a distinctive color to highlight the result */
+}
+
+#approx-loan-amt {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.apply-loan-btn {
+    display: block;
+    width: 200px;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-loan-btn:hover {
+    background-color: #218838;
+}
